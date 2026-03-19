@@ -30,7 +30,7 @@ In the terminal, execute $ `cds lint`. You should see a warning message saying a
 
 ![alt text](images/linting/image-2.png)
 
-Now, to execute it in the CI/CD pipeline created before, you need to create a script, just like the `start`, `build`, etc, in the `package.json` file.
+Now, to execute it in the CI/CD pipeline created before, you need to create a script, just like the `start`, `build`, etc, in the `package.json` file. The script **must** be named `ci-lint`.
 
 Create a new script entry:
 
@@ -45,4 +45,28 @@ Create a new script entry:
 
 ## SAP Continuous Integration and Delivery Configuration
 
-Last, but not least, you need to enable the `Lint Check` in the `SAP Continuous Integration and Delivery` service. If you want your build to fail if it reveals any errors, check the `Fail on Error` checkbox.
+### Lint Check
+
+Now, you need to enable the `Lint Check` in the `SAP Continuous Integration and Delivery` service. If you want your build to fail if it reveals any errors, check the `Fail on Error` checkbox.
+
+Go back to the `SAP Continuous Integration and Delivery` service. On the `Jobs` tab, select the previously created job.
+
+![alt text](image-9.png)
+
+Then, click on the `Edit` button.
+
+![alt text](image-8.png)
+
+Go to `Stages`, then `Build` stage. Let's activate `Lint Check`.
+
+Click on the `+` (Add) button next to `Lint Check`.
+
+![alt text](image-11.png)
+
+Check the flag `Fail on Error` if you want to stop the `build` process when an error occurs during the linting process.
+
+![alt text](image-12.png)
+
+Click on the `Save` button.
+
+Now, the linting script implemented in the project will be executed as part of the CI/CD pipeline.

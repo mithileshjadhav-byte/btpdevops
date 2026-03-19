@@ -1,15 +1,8 @@
 # Get Started with SAP Cloud Transport Management Service
 
-<!-- description --> Learn how to set up SAP Cloud Transport Management Service in an SAP BTP Trial account, or in an existing SAP BTP subaccount.
-
-## Intro
+Learn how to set up SAP Cloud Transport Management Service in an existing SAP BTP subaccount.
 
 For more information about SAP Cloud Transport Management service, see the SAP Help Portal at [SAP Cloud Transport Management Service](https://help.sap.com/docs/cloud-transport-management).
-
-### Open the SAP BTP cockpit
-
-1. To access SAP BTP Cockpit of your enterprise account, choose [https://cockpit.btp.cloud.sap](https://cockpit.btp.cloud.sap).
-   Depending on your own geo location, this URL will redirect you to the closest regional SAP BTP Cockpit URL.
 
 ---
 
@@ -29,9 +22,17 @@ In general, entitlements are required to define access of a subaccount to a serv
 
    ![AddServicePlans](images/cloud-transport-management/0120%20Add%20service%20plans.png)
 
-4. In the dialog window, search for _Cloud Transport Management_ (for example by entering _trans_). Click on the entry **Cloud Transport Management**. From the **Available Plans**, select **standard** (without _Application_) and **free (Application)**. Click on **Add 2 Service Plans**.
+4. In the dialog window, search for _Cloud Transport Management_ (for example by entering _trans_). Click on the entry **Cloud Transport Management**. From the **Available Plans**, select:
 
-   ![SelectServicePlans](images/cloud-transport-management/0130%20Select%20cTMS%20service%20plans.png)
+- **standard**
+  - Provides programmatic access to Cloud Transport Management...
+
+- **standard (Application)** or **free (Application)**
+  - Manage transports of development artifacts and application-specific content...
+
+Click on **Add 2 Service Plans**.
+
+![SelectServicePlans](images/cloud-transport-management/0130%20Select%20cTMS%20service%20plans.png)
 
 5. Choose **Save**.
 

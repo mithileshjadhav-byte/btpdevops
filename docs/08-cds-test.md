@@ -27,8 +27,26 @@ The test run should fail, the errors will be reported in the console. You should
 
 ## SAP Continuous Integration and Delivery Configuration
 
-In the Additional Unit Tests stage, the tests you've implemented are executed.
+### Additional Unit Tests
 
-Choose + (Add) to add an `npm Script`.
+Go back to the `SAP Continuous Integration and Delivery` service. On the `Jobs` tab, select the previously created job.
+
+![alt text](image-9.png)
+
+Then, click on the `Edit` button.
+
+![alt text](image-8.png)
+
+Go to `Stages`, then `Additional Unit Tests` stage. Let's activate `npm Script`.
+
+Click on the `+` (Add) button next to `npm Script`.
+
+Choose `+` (Add) to add an `npm Script`.
 
 In the `npm Script` text field, enter the name of the test script from the `scripts` section to be executed.
+
+![alt text](image-13.png)
+
+Click on the `Save` button.
+
+Now, the automated tests implemented in the project will be executed as part of the CI/CD pipeline.

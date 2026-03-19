@@ -1,4 +1,14 @@
-# Create development space
+# Business Application Studio configuration
+
+Configure a development space and start a project in BAS.
+
+## You will learn
+
+- How to set up SAP Business Application Studio
+- How to clone a GitHub repository
+- How locally test your applications
+
+## Create development space
 
 On the SAP Business Application Studio start page, click Create Dev Space.
 
@@ -18,9 +28,7 @@ Open the development space by clicking on its name.
 
 Once you are in the development space, you will see a Welcome page from which you can create the application project.
 
-Copy the following GitHub repository URL into your clipboard:
-
-https://github.com/mauriciolauffer/btpdevops.git
+Copy your GitHub repository URL into your clipboard. The project cloned from https://github.com/mauriciolauffer/btpdevops.git
 
 Click the link **Clone from Git**.
 
@@ -42,9 +50,9 @@ Your development environment is now ready.
 
 ## Complete the service
 
-From the hamburger menu select **Terminal** and then **New Terminal**
+From the hamburger menu select **Terminal** and then **New Terminal**.
 
-Ensure that your terminal prompt shows `btpdevops`. At the terminal prompt, enter `npm install` and press **Enter**. This command will download and install all necessary modules from the npm package repository required to run the application.
+Ensure that your terminal prompt shows the root folder of your project. At the terminal prompt, enter `npm install` and press **Enter**. This command will download and install all necessary modules from the npm package repository required to run the application.
 
 ![alt text](images/bas-config/image-19.png)
 
@@ -54,20 +62,16 @@ At the terminal prompt, enter `npm start`.
 
 ![alt text](images/bas-config/image-20.png)
 
-Click on **Open in a new tab** button. You will see the application running.
+Click on **Open in a new tab** button. You will see the application running. You can explore the services clicking on the links.
 
-Click on `/fiori-apps.html` in **Web Applications**.
+![alt text](images/bas-config/image-30.png)
 
-![alt text](images/bas-config/image-21.png)
+Click on `/odata/v4/admin/` `$metadata` in **Service Endpoints** to see the OData service metadata.
 
-Click on the **Manage Authors** tile.
+![alt text](images/bas-config/image-31.png)
 
-![alt text](images/bas-config/image-22.png)
+Click on `/odata/v4/admin/` `Authors` in **Service Endpoints** to see the entity data.
 
-Click on the **Create** button.
+![alt text](images/bas-config/image-32.png)
 
-![alt text](images/bas-config/image-23.png)
-
-Enter the information to create a new author. Then, click on the **Create** button.
-
-![alt text](images/bas-config/image-24.png)
+You now know the application works.

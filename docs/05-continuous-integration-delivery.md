@@ -1,12 +1,6 @@
 # Get Started with an SAP Cloud Application Programming Model Project in SAP Continuous Integration and Delivery
 
-<!-- description --> Configure and run a basic CI/CD pipeline for your SAP Cloud Application Programming Model project.
-
-## Prerequisites
-
-- You have an account on SAP Business Technology Platform. See [Enterprise Accounts](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/046f127f2a614438b616ccfc575fdb16.html).
-- You're an Administrator of your global account and Org Manager of your subaccount on SAP BTP.
-- In your GitHub repository, you have an SAP Cloud Application Programming Model project. See [Getting Started](https://cap.cloud.sap/docs/get-started/).
+Configure and run a basic CI/CD pipeline for your SAP Cloud Application Programming Model project.
 
 ## You will learn
 
@@ -18,6 +12,8 @@
 
 Enable SAP Continuous Integration and Delivery, add the required permissions, and access the service.
 
+> **Note**: If you have used the booster to [prepare Cloud Found runtime in the subaccount](./01-cloud-foundry-runtime.md), you can skip the steps 1, 2, 3 and 4. The booster should have created the service. Go straight to step **5**.
+
 1. In your subaccount in the SAP BTP cockpit, choose **Services** → **Service Marketplace**.
 
 2. Search for `Continuous Integration & Delivery` and choose the appearing service tile.
@@ -27,7 +23,7 @@ Enable SAP Continuous Integration and Delivery, add the required permissions, an
    > **Note:** If in the **Service Marketplace**, you can't see the **Continuous Integration & Delivery** tile, you might need to add the required entitlements to your subaccount. See [Configure Entitlements and Quotas from Your Global Account](https://help.sap.com/docs/btp/sap-business-technology-platform/configure-entitlements-and-quotas-for-subaccounts#configure-entitlements-and-quotas-from-your-global-account).
 
 3. Choose **Create**.
-4. In the **New Instance or Subscription** pop-up, select the **Subscription** plan and choose **Create**.
+4. In the **New Instance or Subscription** pop-up, select the **Subscription** `default` plan and choose **Create**.
 
 5. From the navigation pane, choose **Security** **&rarr;** **Users**.
 
@@ -144,6 +140,8 @@ The following graphic illustrates this flow:
 
 12. Enter the **Payload URL**, **Content type**, and **Secret** from the **Webhook Creation** pop-up in SAP Continuous Integration and Delivery. For all other settings, leave the default values.
 
+![alt text](images/continuous-integration-delivery/github-webhook.png)
+
 13. Choose **Add webhook**.
 
 ### Create and trigger a basic CI/CD job
@@ -151,6 +149,8 @@ The following graphic illustrates this flow:
 Configure a basic job for SAP Cloud Application Model projects.
 
 1. In SAP Continuous Integration and Delivery, go to the **Jobs** tab and choose **+** _(Create job)_.
+
+![alt text](images/continuous-integration-delivery/cicd-jobs.png)
 
 2. In the **General Information** section of the **Create Job** pane, enter the following values:
    - **Job Name:** Freely choose a unique name for your job.
@@ -166,7 +166,9 @@ Configure a basic job for SAP Cloud Application Model projects.
 
 5. For the **Build** stage, keep the default values.
 
-6. For the **Acceptance** stage, enter the following values for the **Deploy to Cloud Foundry Space** step:
+6. The **Acceptance** stage is `optional`. Ignore it in this workshop. Skip to step **7**.
+
+   For the **Acceptance** stage, enter the following values for the **Deploy to Cloud Foundry Space** step:
    - **Application Name:** Enter a unique application name.
    - **API Endpoint:** Enter the URL of your SAP BTP, Cloud Foundry API Endpoint. You can find it in the overview of your subaccount in the SAP BTP cockpit, under the **Cloud Foundry Environment:** tab.
    - **Org Name:** Enter the name of your Cloud Foundry organization. You can also find it in the overview of your subaccount.
