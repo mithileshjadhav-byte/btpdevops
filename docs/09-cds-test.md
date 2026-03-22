@@ -84,3 +84,4 @@ The `Build` process will only successfully complete when `linting` doesn't retur
 Now, you should fix the tests in the codebase, commit them and wait for the CI/CD pipeline to be triggered again.
 
 Once the `Build` process is complete, a new transport requested will be created in the `Cloud Transport Management Service`.
+
