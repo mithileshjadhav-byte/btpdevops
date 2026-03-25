@@ -22,7 +22,7 @@ Whether you're a developer looking to automate your workflow or an architect def
 
 - You have a GitHub account. See [Creating an account on GitHub](https://docs.github.com/en/get-started/start-your-journey/creating-an-account-on-github).
 
-- You have cloned the workshop project: `https://github.com/mauriciolauffer/btpdevops.git`. See [Forking a repository](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo).
+- You have forked the workshop project: `https://github.com/mauriciolauffer/btpdevops.git`. See [Forking a repository](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo).
 
 ## Exercises:
 
